@@ -24,6 +24,9 @@ def run_game():
     gf.create_fleet(ai_settings,screen,ship,aliens)
 
     while True:
+
+        m = pygame.time.Clock().tick()#控制帧数，括号内数字表明每秒运行多少次，用1000除以此数字，表示规定运行一次需要的毫秒数
+        print( m)
         gf.check_events(ai_settings,screen,stats,sb,play_button,ship,aliens,bullets)
 
         if stats.game_active:
